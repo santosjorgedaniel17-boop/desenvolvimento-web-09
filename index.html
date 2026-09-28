@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Configuração do Grid da Galeria */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo base para os itens da galeria */
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ddd;
+            min-height: 150px;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* A primeira foto ocupa 2 colunas e 2 linhas */
+        .galeria-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Responsividade básica para telas menores */
+        @media (max-width: 768px) {
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .galeria-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1; /* Ajusta no mobile se necessário */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Galeria</h2>
+
+    <div class="galeria">
+        <div class="galeria-item">
+            <img src="midias0\incendio-em-plantacao-de-cana-de-acucar-em-dumont-sp-em-24-de-agosto-de-2024-1724673764817_v2_4x3.jpg" alt="Foto 1 em Destaque">
+        </div>
+        <div class="galeria-item">
+            <img src="midias0\Capela_no_Bairro_de_Varginha_-_panoramio.jpg" alt="Foto 2">
+        </div>
+        <div class="galeria-item">
+            <img src="midias0\RIO-TRANSBORDA-ITAPETININGA.webp" alt="Foto 3">
+        </div>
+        <div class="galeria-item">
+            <img src="midias0\xw8E-xSZgJGc3q8p.webp" alt="Foto 4">
+        </div>
+        <div class="galeria-item">
+            <img src="midias0\sid.jpg" alt="Foto 5">
+        </div>
+    </div>
+
+</body>
+</html>
