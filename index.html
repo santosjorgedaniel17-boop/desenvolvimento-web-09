@@ -18,7 +18,6 @@
             margin-bottom: 20px;
         }
 
-        /* Configuração do Grid da Galeria */
         .galeria {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -27,7 +26,6 @@
             margin: 0 auto;
         }
 
-        /* Estilo base para os itens da galeria */
         .galeria-item {
             position: relative;
             overflow: hidden;
@@ -49,20 +47,20 @@
             transform: scale(1.03);
         }
 
-        /* A primeira foto ocupa 2 colunas e 2 linhas */
+ 
         .galeria-item:first-child {
             grid-column: span 2;
             grid-row: span 2;
         }
 
-        /* Responsividade básica para telas menores */
+      
         @media (max-width: 768px) {
             .galeria {
                 grid-template-columns: repeat(2, 1fr);
             }
             .galeria-item:first-child {
                 grid-column: span 2;
-                grid-row: span 1; /* Ajusta no mobile se necessário */
+                grid-row: span 1; 
             }
         }
     </style>
